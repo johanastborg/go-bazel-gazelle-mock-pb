@@ -17,6 +17,7 @@ go_proto_library(
 
 go_library(
     name = "phonebook",
+    srcs = ["database.go"],
     embed = [":v1_go_proto"],
     importpath = "asymptotic.world/api/phonebook/v1",
     visibility = ["//visibility:public"],
