@@ -1,0 +1,5 @@
+load("@gazelle//:def.bzl", "gazelle")
+
+# gazelle:prefix asymptotic.world
+# gazelle:proto default
+gazelle(name = "gazelle")
