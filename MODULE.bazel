@@ -4,6 +4,6 @@ bazel_dep(name = "gazelle", version = "0.47.0")
 bazel_dep(name = "protobuf", version = "29.3")
 bazel_dep(name = "rules_proto", version = "7.1.0")
 
-
 go_deps = use_extension("@gazelle//:extensions.bzl", "go_deps")
 go_deps.from_file(go_mod = "//:go.mod")
+use_repo(go_deps, "org_uber_go_mock")
