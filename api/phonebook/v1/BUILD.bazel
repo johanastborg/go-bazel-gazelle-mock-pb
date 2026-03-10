@@ -25,6 +25,10 @@ go_library(
 
 go_test(
     name = "phonebook_test",
-    srcs = ["person_test.go"],
+    srcs = [
+        "mock_database_test.go",
+        "person_test.go",
+    ],
     embed = [":phonebook"],
+    deps = ["@org_uber_go_mock//gomock"],
 )
