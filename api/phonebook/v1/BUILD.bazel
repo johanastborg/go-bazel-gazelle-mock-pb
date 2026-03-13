@@ -17,7 +17,10 @@ go_proto_library(
 
 go_library(
     name = "phonebook",
-    srcs = ["database.go"],
+    srcs = [
+        "database.go",
+        "server.go",
+    ],
     embed = [":v1_go_proto"],
     importpath = "asymptotic.world/api/phonebook/v1",
     visibility = ["//visibility:public"],
@@ -27,6 +30,7 @@ go_test(
     name = "phonebook_test",
     srcs = [
         "mock_database_test.go",
+        "person_server_test.go",
         "person_test.go",
     ],
     embed = [":phonebook"],
